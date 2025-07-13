@@ -1,6 +1,7 @@
 require_relative "code"
 require_relative "player"
 require_relative "computer"
+require "colorize"
 
 class Game
   MAX_TURNS = 12
@@ -11,7 +12,7 @@ class Game
   end
 
   def play
-    puts "🎯 Welcome to Mastermind!"
+    puts "🎯 Welcome to Mastermind!".green
     puts "Available colors:#{Code::COLORS.join(', ')}"
     puts "Would you like to be the code maker or the code breaker (maker/breaker)"
     role = gets.chomp.downcase
