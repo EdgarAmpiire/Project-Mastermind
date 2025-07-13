@@ -9,7 +9,7 @@ class Computer
   def make_guess(previous_guesses)
     if previous_guesses.empty?
       @last_guess = ["R", "G", "B", "Y"] # Deterministic first guess
-      return last_guess
+      return @last_guess
     end
 
     # Filter possible code based on all feedback sofar
